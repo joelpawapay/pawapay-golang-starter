@@ -21,7 +21,7 @@ func (server *Server) deposits(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 	}
 
-}
+
 
 func (server *Server) payouts(w http.ResponseWriter, r *http.Request) {
 	var mobileMoney *models.MobileMoneyProvider
