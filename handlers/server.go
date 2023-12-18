@@ -59,7 +59,9 @@ func (server *Server) Run(addr string) {
 }
 
 func (server *Server) initializeRoutes() {
-	server.Router.Post("/signin", server.signIn)
+	server.Router.Post("/deposits", server.deposits)
+	server.Router.Post("/payouts", server.payouts)
+
 
 }
 

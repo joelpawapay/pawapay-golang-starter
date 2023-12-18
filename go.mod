@@ -1,4 +1,4 @@
-module github.com/xceejay/rest-api-starter
+module github.com/xceejay/pawapay-golang-starter
 
 go 1.19
 

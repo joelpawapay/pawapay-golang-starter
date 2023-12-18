@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/xceejay/rest-api-starter/handlers"
+	"github.com/xceejay/pawapay-golang-starter/handlers"
 )
 
 //nolint
