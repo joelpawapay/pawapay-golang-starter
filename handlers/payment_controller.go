@@ -8,7 +8,7 @@ import (
 	"github.com/xceejay/pawapay-golang-starter/models"
 )
 
-/
+
 func (server *Server) deposits(w http.ResponseWriter, r *http.Request) {
 	var mobileMoney *models.MobileMoneyProvider
 	body, err := io.ReadAll(r.Body)
@@ -20,7 +20,7 @@ func (server *Server) deposits(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, err.Error())
 	}
-
+}
 
 
 func (server *Server) payouts(w http.ResponseWriter, r *http.Request) {
