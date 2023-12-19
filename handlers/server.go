@@ -3,7 +3,6 @@
 package handlers
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -12,7 +11,6 @@ import (
 	"github.com/go-chi/cors"
 	"github.com/go-chi/httprate"
 	"github.com/goccy/go-json"
-	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
@@ -26,15 +24,15 @@ type ErrorResponse struct {
 }
 
 func (server *Server) Initialize(username, password, hostname, dbname string) {
-	connectionString := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", username, password, hostname, dbname)
+	// connectionString := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", username, password, hostname, dbname)
 
-	var err error
+	// var err error
 
-	server.DB, err = gorm.Open(mysql.Open(connectionString), &gorm.Config{})
+	// server.DB, err = gorm.Open(mysql.Open(connectionString), &gorm.Config{})
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
 	server.Router = chi.NewRouter()
 	server.Router.Use(httprate.Limit(40, // requests
@@ -59,9 +57,9 @@ func (server *Server) Run(addr string) {
 }
 
 func (server *Server) initializeRoutes() {
+
 	server.Router.Post("/deposits", server.deposits)
 	server.Router.Post("/payouts", server.payouts)
-
 
 }
 

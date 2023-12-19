@@ -19,6 +19,8 @@ func main() {
 	server := handlers.Server{}
 	log.Println("Configuration loaded:", ENVIRONMENT)
 	//server.Initialize(LoadDBConfig())
+	server.Initialize(LoadDBConfig())
+
 	log.Println("Starting server on http://127.0.0.1:7070")
 	server.Run(":7070")
 }
