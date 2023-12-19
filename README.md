@@ -1,6 +1,6 @@
-# Simple RESTful API starter Kit in Golang
+# Simple RESTful API starter developer guide for pawapay in Golang
 
-Blazingly fast RESTful API starter in Golang for small to medium scale projects. 
+
 
 ## Getting Started
 
@@ -22,7 +22,6 @@ A step by step guide that will tell you how to get the development environment u
 $ make
 $ make build
 $ ./autoreload.sh 
-$ Start Coding...😃
 
 ```
 
@@ -46,7 +45,6 @@ $ Start Coding...😃
 * godotenv
 * logrus
 * viper
-* mysql
 * gorm
 
 
